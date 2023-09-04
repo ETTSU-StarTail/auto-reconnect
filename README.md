@@ -2,6 +2,8 @@
 
 指定のネットワークアダプタがネットワークから切断された際に再起動するスクリプト
 
+![image](https://github.com/nsd-working-g1/auto-reconnect/assets/46245666/cfabbdbf-5eb5-4b59-95f5-e57527dfef89)
+
 ## Usage
 
 ```powershell
