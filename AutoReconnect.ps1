@@ -30,7 +30,10 @@ do {
     }
 
     if ($AdapterStatus -eq "Disconnected") {
-        Write-Output "$AdapterName の切断を検知 → 再起動" | Out-File -FilePath reconnect.log -Encoding utf8 -Append
+        $RestartLog = "$DateTime - $AdapterName の切断を検知 → 再起動"
+
+        Write-Host -ForegroundColor Red $RestartLog
+        Write-Output "$RestartLog" | Out-File -FilePath reconnect.log -Encoding utf8 -Append
         Restart-NetAdapter $AdapterName
     }
 
