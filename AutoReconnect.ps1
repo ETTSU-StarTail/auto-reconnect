@@ -33,7 +33,11 @@ do {
         $RestartLog = "$DateTime - $AdapterName の切断を検知 → 再起動"
 
         Write-Host -ForegroundColor Red $RestartLog
-        Write-Output "$RestartLog" | Out-File -FilePath reconnect.log -Encoding utf8 -Append
+
+        if ($Logging) {
+            Write-Output "$RestartLog" | Out-File -FilePath reconnect.log -Encoding utf8 -Append
+        }
+
         Restart-NetAdapter $AdapterName
     }
 
