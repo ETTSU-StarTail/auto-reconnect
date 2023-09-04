@@ -5,7 +5,10 @@ param (
     $AdapterName,
     [Parameter()]
     [int]
-    $Interval = 30
+    $Interval = 30,
+    [Parameter()]
+    [switch]
+    $Logging
 )
 
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
@@ -21,7 +24,10 @@ do {
     $AdapterStatusLog = "$DateTime - $AdapterName の接続状態: $AdapterStatus"
 
     Write-Host $AdapterStatusLog
-    Write-Output $AdapterStatusLog | Out-File -FilePath reconnect.log -Encoding utf8 -Append
+
+    if ($Logging) {
+        Write-Output $AdapterStatusLog | Out-File -FilePath reconnect.log -Encoding utf8 -Append
+    }
 
     if ($AdapterStatus -eq "Disconnected") {
         Write-Output "$AdapterName の切断を検知 → 再起動" | Out-File -FilePath reconnect.log -Encoding utf8 -Append
