@@ -14,6 +14,10 @@ image::https://github.com/nsd-working-g1/auto-reconnect/assets/46245666/cfabbdbf
 - `AdapterName` にはネットワークアダプタ名を指定
 - `Interval` にはチェック間隔を秒で指定
 
+== required
+
+- PowerShell 7.x
+
 == Memo
 
 === ネットワークアダプタ名を調べる（Windows11）
