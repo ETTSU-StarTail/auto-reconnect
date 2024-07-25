@@ -22,7 +22,7 @@
 
 ![image](https://github.com/user-attachments/assets/cbe8d752-5160-4774-aeda-dd0b5e68ebe8)
 
-### タスクスケジューラに設定する（Windows11）\
+### タスクスケジューラに設定する（Windows11）
 
 1. タスクスケジューラを起動する
 2. 「タスクの作成」をクリック
