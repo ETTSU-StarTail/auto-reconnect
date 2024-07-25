@@ -50,9 +50,6 @@ image::https://github.com/user-attachments/assets/cbe8d752-5160-4774-aeda-dd0b5e
 -executionpolicy bypass -file "path\to\auto-reconnect\AutoReconnect.ps1" -AdapterName "Wi-Fi 2" -Interval 60
 ----
 +
-[NOTE]
-----
-`path\to\auto-reconnect\AutoReconnect.ps1` は各々の環境に合わせること。
-----
+NOTE: ``path\to\auto-reconnect\AutoReconnect.ps1`` は各々の環境に合わせること
 +
 . そのほか任意の設定を済ませたら OK をクリック
